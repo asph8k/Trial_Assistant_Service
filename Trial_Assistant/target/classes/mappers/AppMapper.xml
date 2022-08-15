@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.spring.pr.notice.mapper.IAppMapper">
+	
+	<resultMap type="com.spring.pr.command.TotalApplierVO" id="TotalApplierMap">
+		<id column="APP_NUM_SEQ" property="AppNum"/>
+		<result column="JOIN_ID" property="JoinId"/>
+		<result column="APP_WHTR_INGB" property="AppWhtrIngb"/>
+		<result column="APP_DATE" property="AppDate"/>
+		<result column="APP_CLASSIFICATION" property="AppClassification"/>
+		<result column="APP_NAME" property="AppName"/>
+	</resultMap>
+<!--  	
+	<resultMap type="com.spring.pr.command.GhVO" id="GhMap">
+		<id column="GH_NUM_SEQ" property="GhNum"/>
+		<id column="APP_NUM_SEQ" property="AppNum"/>
+		<result column="GH_NAME" property="GhName"/>
+		<result column="GH_OFC_NAME" property="GhOfcName"/>
+		<result column="GH_OFC_NUM" property="GhOfcNum"/>
+		<result column="GH_YEAR" property="GhYear"/>
+		<result column="GH_SRTTN" property="GhSrttn"/>
+		<result column="GH_SOC_NUM" property="GhSocNum"/>
+		<result column="GH_BSNS_NUM" property="GhBsnsNum"/>
+		<result column="GH_JOB" property=""/>
+		<result column="GH_FAX" property=""/>
+		<result column="GH_HOME_NUM" property=""/>
+		<result column="GH_ACAD_BACK" property=""/>
+		<result column="GH_ACAD_BACK_FILE" property=""/>
+		<result column="GH_CARRER" property=""/>
+		<result column="GH_CARRER_FILE" property=""/>
+		<result column="GH_EMAIL" property=""/>
+		<result column="GH_PHONE_NUM" property=""/>
+		<result column="GH_BANK" property=""/>
+		<result column="GH_ACC_HOL" property=""/>
+		<result column="GH_BANK_NUM" property=""/>
+		<result column="GH_POST_NUM" property=""/>
+		<result column="GH_ADDR" property=""/>
+		<result column="GH_DTL_ADDR" property=""/>
+		<result column="JOIN_ID" property=""/>
+	</resultMap>
+-->
+	<select id="getAppList" resultMap="TotalApplierMap">
+		SELECT * FROM TotalApplier
+	</select>
+	
+	<select id="getAppContent" resultMap="TotalApplierMap">
+		SELECT g.gh_name, g.join_id, g.gh_soc_num, g.gh_home_num, g.gh_phone_num, g.gh_email,
+        		g.gh_job, g.gh_fax, g.gh_bank, g.gh_acc_hol, g.gh_bank_num, g.gh_srttn, g.gh_year,
+        		g.gh_bsns_num, g.gh_ofc_num, g.gh_ofc_name, g.gh_acad_back, g.gh_acad_back_file,
+        		g.gh_carrer, g.gh_carrer_file, g.gh_addr, g.gh_dtl_addr
+		FROM TotalApplier ta INNER JOIN GH g
+        	ON ta.APP_NUM_SEQ = g.APP_NUM_SEQ
+		WHERE ta.join_id = #{JoinId}		
+	</select>
+	
+	<update id="updateApp">
+		
+	</update>
+	
+	<delete id="">
+		
+	</delete>
+
+</mapper>
