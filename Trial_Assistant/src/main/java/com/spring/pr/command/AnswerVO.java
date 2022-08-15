@@ -41,15 +41,7 @@ public class AnswerVO {
 	private String AnsWriter;
 	private String AnsContent;
 	private Timestamp AnsDate;
-<<<<<<< HEAD
-=======
-	
->>>>>>> baabace3153818189366cafafda639c8a6261119
 	private String AnsFileLoca;
 	private int AnsHit;
 
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> baabace3153818189366cafafda639c8a6261119

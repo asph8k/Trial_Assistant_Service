@@ -73,11 +73,8 @@ public class GhVO {
 	private String GhBank;
 	private String GhAccHol;
 	private String GhBankNum;
-<<<<<<< HEAD
 	private String GhPostNum;
-=======
 	private String GhPstlCode;
->>>>>>> baabace3153818189366cafafda639c8a6261119
 	private String GhAddr;
 	private String GhDtlAddr;
 	private int AppNum;

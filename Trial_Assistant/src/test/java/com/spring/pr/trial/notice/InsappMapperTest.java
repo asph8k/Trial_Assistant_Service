@@ -15,11 +15,6 @@ public class InsappMapperTest {
 	@Autowired IInsappMapper mapper;
 	
 	@Test
-	public void registTest() {
-		
-	}
-	
-	@Test
 	public void getListTest() {
 		
 	}

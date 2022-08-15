@@ -41,13 +41,10 @@
 	
 	</select>
 	
-<<<<<<< HEAD
-=======
 	<select id = "getContent" resultMap="NoticeMap">
 		select * from Notice where Notice_NUMBER_SEQ = #{NoticeNum}
 	</select>
 	
->>>>>>> baabace3153818189366cafafda639c8a6261119
 	<update id="update">
 		
 		update Notice SET NOTICE_TITLE = #{NoticeTitle}, NOTICE_WRITER = #{NoticeWriter}, NOTICE_Content = #{NoticeContent} 
@@ -58,8 +55,6 @@
 	<delete id="delete">
 		delete from Notice where NOTICE_NUMBER_SEQ = #{NoticeNum}
 	</delete>
-<<<<<<< HEAD
-=======
 	
 		<!-- 조회 수 증가 로직  -->
 	<update id="upHit">
@@ -68,5 +63,5 @@
 		where Notice_NUMBER_SEQ = #{NoticeNum} 
 		
 	</update>	
->>>>>>> baabace3153818189366cafafda639c8a6261119
+
 </mapper>

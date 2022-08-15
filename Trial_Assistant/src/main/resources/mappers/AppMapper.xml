@@ -60,8 +60,9 @@
 		
 	</update>
 	
-	<delete id="">
-		
+	<delete id="deleteApp">
+		DELETE FROM TotalApplier
+		WHERE APP_NUM_SEQ = #{AppNum}
 	</delete>
 
 </mapper>

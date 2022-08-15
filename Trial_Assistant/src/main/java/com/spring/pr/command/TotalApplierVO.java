@@ -14,12 +14,9 @@ CREATE TABLE TotalApplier (
 	JOIN_ID	VARCHAR2(20)	NOT NULL,
 	APP_WHTR_INGB	VARCHAR2(2)	NOT NULL,
 	APP_DATE	DATE DEFAULT SYSDATE NOT NULL,
-<<<<<<< HEAD
 	APP_CLASSIFICATION	VARCHAR2(20)	NOT NULL,
 	APP_NAME VARCHAR2(30) DEFAULT ' ' NOT NULL
-=======
 	APP_CLASSIFICATION	VARCHAR2(20)	NOT NULL
->>>>>>> baabace3153818189366cafafda639c8a6261119
 	);
 	
 	CREATE SEQUENCE APP_NUM_SEQ_NAME
@@ -42,8 +39,6 @@ public class TotalApplierVO {
 	private String AppWhtrIngb;
 	private Timestamp AppDate;
 	private String AppClassification;
-<<<<<<< HEAD
 	private String AppName;
-=======
->>>>>>> baabace3153818189366cafafda639c8a6261119
+
 }

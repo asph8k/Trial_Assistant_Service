@@ -28,7 +28,9 @@ public class AncmtVO {
 		mngr_id VARCHAR2(20) NOT NULL, 
 		anm_degree VARCHAR2(50) NOT NULL,
 		anm_start DATE NOT NULL, 
-		anm_end DATE NOT NULL
+		anm_end DATE NOT NULL,
+		anm_year VARCHAR2(10) NOT NULL,
+		anm_division VARCHAR2(10) NOT NULL
 		);	
 	
 	CREATE SEQUENCE anm_no_seq_name
@@ -49,5 +51,7 @@ public class AncmtVO {
 	private String AnmDegree;
 	private Date AnmStart;
 	private Date AnmEnd;
+	private String AnmYear;
+	private String AnmDivision;
 	
 }
