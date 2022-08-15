@@ -71,12 +71,16 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="shop.html">조력자 신청 </a>
                             </li>
+<<<<<<< HEAD
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">현황조회(관리자)</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">기관정보(관리자)</a>
                             </li>
+=======
+                            
+>>>>>>> baabace3153818189366cafafda639c8a6261119
                         </ul>
                     </div>
     

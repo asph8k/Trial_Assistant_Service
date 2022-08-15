@@ -33,8 +33,13 @@ public class TsVO {
 		TS_DTL_ADDR	VARCHAR2(100)	NOT NULL,
 		TS_EXPRT	VARCHAR2(50)	NOT NULL,
 		TS_LNGG	VARCHAR2(50)	NOT NULL,
+<<<<<<< HEAD
 		TS_DSG_CRT	VARCHAR2(100)	NOT NULL,
 		TS_ACTIVE_AREA	VARCHAR2(100)	NOT NULL,
+=======
+		TS_DSGNT_COURT	VARCHAR2(100)	NOT NULL,
+		TS_ACTVT_AREA	VARCHAR2(100)	NOT NULL,
+>>>>>>> baabace3153818189366cafafda639c8a6261119
 		APP_NUM_SEQ	NUMBER(10)	NOT NULL,
 		JOIN_ID	VARCHAR2(20)	NOT NULL
 		);
@@ -64,8 +69,13 @@ public class TsVO {
 	private String TsDtlAddr;
 	private String TsExprt;
 	private String TsLngg;
+<<<<<<< HEAD
 	private String TsDsgCrt;
 	private String TsActiveArea;
+=======
+	private String TsDsgntCourt;
+	private String TsActvtArea;
+>>>>>>> baabace3153818189366cafafda639c8a6261119
 	private int AppNum;
 	private String JoinId;
 	

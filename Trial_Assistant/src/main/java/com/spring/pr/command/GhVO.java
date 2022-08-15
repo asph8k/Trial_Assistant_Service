@@ -35,7 +35,11 @@ public class GhVO {
 		GH_BANK	VARCHAR2(20)	NOT NULL,
 		GH_ACC_HOL	VARCHAR2(30)	NOT NULL,
 		GH_BANK_NUM	VARCHAR2(30)	NOT NULL,
+<<<<<<< HEAD
 		GH_POST_NUM	VARCHAR2(10)	NOT NULL,
+=======
+		GH_PSTL_CODE	VARCHAR2(10)	NOT NULL,
+>>>>>>> baabace3153818189366cafafda639c8a6261119
 		GH_ADDR	VARCHAR2(100)	NOT NULL,
 		GH_DTL_ADDR	VARCHAR2(100)	NOT NULL,
 		APP_NUM_SEQ	NUMBER(10)	NOT NULL,
@@ -69,7 +73,11 @@ public class GhVO {
 	private String GhBank;
 	private String GhAccHol;
 	private String GhBankNum;
+<<<<<<< HEAD
 	private String GhPostNum;
+=======
+	private String GhPstlCode;
+>>>>>>> baabace3153818189366cafafda639c8a6261119
 	private String GhAddr;
 	private String GhDtlAddr;
 	private int AppNum;

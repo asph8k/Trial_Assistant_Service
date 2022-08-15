@@ -40,6 +40,11 @@ public class NoticeMapperTest {
 	public void getTotal() {
 		System.out.println(mapper.getTotal());
 	}
+
+	@Test
+	public void getContentTest() {
+		System.out.println(mapper.getContent(3));
+	}
 	
 	
 	@Test
@@ -57,6 +62,11 @@ public class NoticeMapperTest {
 	public void deleteTest() {
 
 		mapper.delete(2);
+	}
+	
+	@Test
+	public void upHitTest() {
+		mapper.upHit(3);
 	}
 
 }
