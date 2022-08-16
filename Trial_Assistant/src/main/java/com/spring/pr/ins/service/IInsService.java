@@ -1,4 +1,4 @@
-package com.spring.pr.notice.service;
+package com.spring.pr.ins.service;
 
 import java.util.List;
 

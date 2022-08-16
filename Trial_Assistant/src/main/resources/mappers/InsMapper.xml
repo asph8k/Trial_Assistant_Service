@@ -3,10 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.spring.pr.notice.mapper.IInsMapper">
+<mapper namespace="com.spring.pr.ins.mapper.IInsMapper">
 
 	<resultMap type="com.spring.pr.command.InsVO" id="InsMap">
-		<id column="INS_NUM_SEQ" property="InsNum"/>
+		<result column="INS_NUM" property="InsNum"/>
 		<result column="INS_NAME" property="InsName"/>
 		<result column="INS_PHONE" property="InsPhone"/>
 		<result column="INS_FAXNUM" property="InsFaxNum"/>
@@ -14,13 +14,14 @@
 		<result column="INS_ADDR_DETAIL" property="InsAddrDetail"/>
 		<result column="INS_RGSTR" property="InsRgstr"/>
 		<result column="INS_RLS" property="InsRls"/>
-		<result column="JOIN_ID" property="JoinId"/>
+		<result column="JOINID" property="JoinId"/>
+		<result column="INSSOCNUM" property="InsSocNum"/>
 	</resultMap>
 	
 	<insert id="registIns">
 		INSERT INTO Ins
-		(INS_NUM_SEQ, INS_NAME, INS_PHONE, INS_FAXNUM, INS_ADDR, INS_ADDR_DETAIL, JOIN_ID)
-		VALUES (INS_NUM_SEQ_NAME.NEXTVAL, #{InsName}, #{InsPhone}, #{InsFaxNum}, #{InsAddr}, #{InsAddrDetail}, #{JoinId})
+		(INS_NUM, INS_NAME, INS_PHONE, INS_FAXNUM, INS_ADDR, INS_ADDR_DETAIL, JOINID, INSSOCNUM)
+		VALUES (#{InsNum}, #{InsName}, #{InsPhone}, #{InsFaxNum}, #{InsAddr}, #{InsAddrDetail}, #{JoinId}, #{InsSocNum})
 	</insert>
 	
 	<select id="getInsList" resultMap="InsMap">
@@ -33,18 +34,18 @@
 	
 	<select id="getInsContent" resultMap="InsMap">
 		SELECT * FROM Ins
-		WHERE INS_NUM_SEQ = #{InsNum}
+		WHERE INS_NUM = #{InsNum}
 	</select>
 	
 	<update id="updateIns">
 		UPDATE Ins SET
 		INS_NAME = #{InsName}, INS_PHONE = #{InsPhone}, INS_FAXNUM = #{InsFaxNum}, INS_ADDR = #{InsAddr}, INS_ADDR_DETAIL = #{InsAddrDetail} 
-		WHERE INS_NUM_SEQ = #{InsNum}
+		WHERE INS_NUM = #{InsNum}
 	</update>
 	
 	<delete id="deleteIns">
 		DELETE FROM Ins
-		WHERE INS_NUM_SEQ = #{InsNum}
+		WHERE INS_NUM = #{InsNum}
 	</delete>
 
 </mapper>

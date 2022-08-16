@@ -1,4 +1,4 @@
-package com.spring.pr.notice.mapper;
+package com.spring.pr.app.mapper;
 
 import java.util.List;
 
@@ -12,17 +12,17 @@ public interface IAppMapper {
 	//등재 신청자 목록
 	List<TotalApplierVO> getAppList();
 	
-	//등재 신청자 상세보기
-	TotalApplierVO getAppContent(int AppNum);
-	/*
+	//총 등재 신청자 수
+	int getAppTotal();
+
 	//등재 신청자 상세보기(일반조력자)
-	GhVO getGhAppContent(String JoinId, int AppNum);
+	GhVO getGhAppContent(int AppNum);
 	
 	//등재 신청자 상세보기(통번역인)
-	TsVO getTsAppContent(String JoinId, int AppNum);
+	TsVO getTsAppContent(int AppNum);
 	
 	//등재 신청자 상세보기(기관추천조력자)
-	InsttVO getInsttAppContent(String JoinId, int AppNum);
+	InsttVO getInsttAppContent(int AppNum);
 	
 	//등재 신청자 수정(일반조력자)
 	void updateGhApp(GhVO gvo);
@@ -32,13 +32,10 @@ public interface IAppMapper {
 	
 	//등재 신청자 수정(기관추천조력자)
 	void updateInsttApp(InsttVO ivo);
-	*/
-	//등재 신청사 수정
-	void updateApp(TotalApplierVO vo);
 	
 	//등재 신청자 삭제
 	void deleteApp(int AppNum);
-	/*
+
 	//등재 신청자 삭제(일반조력자)
 	void deleteGhApp(int GhNum);
 	
@@ -47,5 +44,5 @@ public interface IAppMapper {
 	
 	//등재 신청자 삭제(기과추천조력자)
 	void deleteInsttApp(int InsttNum);
-	*/
+
 }

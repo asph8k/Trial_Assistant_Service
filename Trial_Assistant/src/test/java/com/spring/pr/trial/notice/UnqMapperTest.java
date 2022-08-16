@@ -7,7 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.spring.pr.command.UnqualifyVO;
-import com.spring.pr.notice.mapper.IUnqMapper;
+import com.spring.pr.unq.mapper.IUnqMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/root-context.xml"})

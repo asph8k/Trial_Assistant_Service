@@ -23,11 +23,8 @@ public interface INoticeService {
 	
 	// 삭제 
 	void delete(int bno);
-<<<<<<< HEAD
-=======
-	
+
 	// 조회수 증가 
 	void upHit(int bno);
->>>>>>> baabace3153818189366cafafda639c8a6261119
 
 }

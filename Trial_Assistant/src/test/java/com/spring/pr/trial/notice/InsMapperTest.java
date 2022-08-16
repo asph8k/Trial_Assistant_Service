@@ -7,7 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.spring.pr.command.InsVO;
-import com.spring.pr.notice.mapper.IInsMapper;
+import com.spring.pr.ins.mapper.IInsMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/root-context.xml"})
@@ -26,6 +26,7 @@ public class InsMapperTest {
 				ins.setInsAddr(i + "번째 기관주소");
 				ins.setInsAddrDetail(i + "번째 기관상세주소");
 				ins.setJoinId(i + "번째 아이디");
+				ins.setInsSocNum(i + "번째 사업자번호");
 				mapper.registIns(ins);
 		}
 	}

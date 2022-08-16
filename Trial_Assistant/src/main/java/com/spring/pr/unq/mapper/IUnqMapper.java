@@ -1,4 +1,4 @@
-package com.spring.pr.notice.mapper;
+package com.spring.pr.unq.mapper;
 
 import java.util.List;
 

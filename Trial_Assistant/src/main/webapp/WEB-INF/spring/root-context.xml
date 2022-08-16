@@ -47,13 +47,10 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="ds" />
 
-<<<<<<< HEAD
 <!-- <property name="configLocation" value="WEB-INF/spring/mybatis-config.xml"/>
  -->	 <!-- mybatis에 대한 추가적인 설정을 담은 xml 파일을 등록 -->
-=======
 <!-- 	 <property name="configLocation" value="WEB-INF/spring/mybatis-config.xml"/>
  -->	 <!-- mybatis에 대한 추가적인 설정을 담은 xml 파일을 등록  -->
->>>>>>> baabace3153818189366cafafda639c8a6261119
 	 	
 	 <property name="mapperLocations" value="classpath:/mappers/*Mapper.xml"/>
 	  
@@ -63,14 +60,22 @@
 	<!-- mapper이름은 이렇게 지정하세요  -->
 	<mybatis-spring:scan
 		base-package="com.spring.pr.notice.mapper" />
-<<<<<<< HEAD
-<mybatis-spring:scan
+	<mybatis-spring:scan
 		base-package="com.spring.pr.faq.mapper" />
-	
-=======
 	<mybatis-spring:scan
 			base-package="com.spring.pr.faq.mapper" />
 	<mybatis-spring:scan
 			base-package="com.spring.pr.answer.mapper" />
->>>>>>> baabace3153818189366cafafda639c8a6261119
+	<mybatis-spring:scan
+			base-package="com.spring.pr.unq.mapper" />
+	<mybatis-spring:scan
+			base-package="com.spring.pr.suppapp.mapper" />
+	<mybatis-spring:scan
+			base-package="com.spring.pr.slctn.mapper" />
+	<mybatis-spring:scan
+			base-package="com.spring.pr.insapp.mapper" />
+	<mybatis-spring:scan
+			base-package="com.spring.pr.ins.mapper" />
+	<mybatis-spring:scan
+			base-package="com.spring.pr.app.mapper" />
 </beans>

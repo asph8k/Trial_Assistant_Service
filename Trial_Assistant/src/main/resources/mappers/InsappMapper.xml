@@ -3,34 +3,54 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.spring.pr.notice.mapper.IInsappMapper">
-	<resultMap type="com.spring.pr.command.TotalApplierVO" id="InsappMap">
-		<id column="APP_NUM_SEQ" property="AppNum"/>
-		<result column="JOIN_ID" property="JoinId"/>
-		<result column="APP_WHTR_INGB" property="AppWhtrIngb"/>
-		<result column="APP_DATE" property="AppDate"/>
-		<result column="APP_CLASSIFICATION" property="AppClassification"/>
-		<result column="APP_NAME" property="AppName"/>
+<mapper namespace="com.spring.pr.insapp.mapper.IInsappMapper">
+	<resultMap type="com.spring.pr.command.UserBasicVO" id="UserBasicMap">
+		<result column="JOINID" property="JoinId"/>
+		<result column="JOINSOCNUM" property="JoinSocNum"/>
+	</resultMap>
+	
+	<resultMap type="com.spring.pr.command.UserDetailVO" id="UserDetailMap">
+		<result column="JOINNAME" property="JoinName"/>
+		<result column="JOINPW" property="JoinPw"/>
+		<result column="JOINGEN" property="JoinGen"/>
+		<result column="JOINEMAIL" property="JoinEmail"/>
+		<result column="JOINPHONE" property="JoinPhone"/>
+		<result column="JOINADDRBASIC" property="JoinAddrBasic"/>
+		<result column="JOINADDRDETAIL" property="JoinAddrDetail"/>
+	</resultMap>
+	
+	<resultMap type="com.spring.pr.command.InsVO" id="InsMap">
+		<result column="INS_NAME" property="InsName"/>
+		<result column="INS_PHONE" property="InsPhone"/>
+		<result column="INS_ADDR" property="InsAddr"/>
+	</resultMap>
+	
+	<resultMap type="com.spring.pr.command.InsappVO" id="InsappMap">
+		<collection property="udVO" resultMap="UserDetailMap" />
+		<collection property="ubVO" resultMap="UserBasicMap"/>
+		<collection property="insVO" resultMap="InsMap"/>
 	</resultMap>
 	
 	<select id="getInsappList" resultMap="InsappMap">
-		SELECT * FROM TotalApplier
+		SELECT * FROM Userbasic
 	</select>
 	
 	<select id="getInsappTotal" resultType="int">
-		SELECT COUNT(*) FROM TotalApplier
+		SELECT COUNT(*) FROM Userbasic
 	</select>
 	
 	<select id="getInsappContent" resultMap="InsappMap">
-		SELECT ud.join_name, ud.join_pw, ud.join_phone, ud.join_email, ud.join_gen, ud.join_soc_num, ud.join_addr_basic, ud.join_addr_detail,
+		SELECT ud.joinname, ub.joinid, ud.joinpw, ud.joinphone, ud.joinemail, ud.joingen, ub.joinsocnum, ud.joinaddrbasic, ud.joinaddrdetail,
         		ins.ins_name, ins.ins_phone, ins.ins_addr
-		FROM Totalapplier ta INNER JOIN Userbasic ub 
-        		ON ta.JOIN_ID = ub.JOIN_ID
-   			INNER JOIN Userdetail ud
-        		ON ub.JOIN_SOC_NUM = ud.JOIN_SOC_NUM
+		FROM userdetail ud INNER JOIN Userbasic ub 
+				ON ud.joinsocnum = ub.joinsocnum
     		INNER JOIN Ins ins
-       			ON ub.JOIN_ID = ins.JOIN_ID
-		WHERE ins.join_id = #{JoinId}
+        		ON ub.joinid = ins.joinid
+		WHERE ub.joinid = #{JoinId}
 	</select>
+	
+	<update id="updateInsapp">
+		
+	</update>
 	
 </mapper>

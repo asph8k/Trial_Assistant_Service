@@ -1,4 +1,4 @@
-package com.spring.pr.notice.service;
+package com.spring.pr.app.service;
 
 import java.util.List;
 
@@ -13,13 +13,13 @@ public interface IAppService {
 	List<TotalApplierVO> getAppList();
 	
 	//등재 신청자 상세보기(일반조력자)
-	GhVO getGhAppContent(String JoinId, int AppNum);
+	GhVO getGhAppContent(int AppNum);
 	
 	//등재 신청자 상세보기(통번역인)
-	TsVO getTsAppContent(String JoinId, int AppNum);
+	TsVO getTsAppContent(int AppNum);
 	
 	//등재 신청자 상세보기(기관추천조력자)
-	InsttVO getInsttAppContent(String JoinId, int AppNum);
+	InsttVO getInsttAppContent(int AppNum);
 	
 	//등재 신청자 수정(일반조력자)
 	void updateGhApp(GhVO gvo);

@@ -1,10 +1,10 @@
-package com.spring.pr.notice.mapper;
+package com.spring.pr.slctn.service;
 
 import java.util.List;
 
 import com.spring.pr.command.SlctnVO;
 
-public interface ISlctnMapper {
+public interface ISlctnService {
 	
 	//조력자 신청 승인자 등록
 	void SlctnRegist(SlctnVO vo);

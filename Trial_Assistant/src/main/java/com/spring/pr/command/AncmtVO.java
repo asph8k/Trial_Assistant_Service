@@ -30,7 +30,7 @@ public class AncmtVO {
 		anm_start DATE NOT NULL, 
 		anm_end DATE NOT NULL,
 		anm_year VARCHAR2(10) NOT NULL,
-		anm_division VARCHAR2(10) NOT NULL
+		anm_division VARCHAR2(50) NOT NULL
 		);	
 	
 	CREATE SEQUENCE anm_no_seq_name

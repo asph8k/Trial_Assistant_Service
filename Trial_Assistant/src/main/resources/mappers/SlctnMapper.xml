@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.spring.pr.notice.mapper.ISlctnMapper">
+<mapper namespace="com.spring.pr.slctn.mapper.ISlctnMapper">
 
 	<resultMap type="com.spring.pr.command.SlctnVO" id="SlctnMap">
 		<id column="SEL_NUM_SEQ" property="SelNum"/>
