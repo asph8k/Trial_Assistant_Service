@@ -29,25 +29,24 @@ public class SuppappMapperTest {
 	
 	@Test 
 	public void getInsttContentTest() {
-		System.out.println(mapper.getInsttSuppappContent(2));
+		System.out.println(mapper.getInsttSuppappContent(3));
 	}
 	
 	@Test 
 	public void getTsContentTest() {
-		System.out.println(mapper.getTsSuppappContent(2));
+		System.out.println(mapper.getTsSuppappContent(3));
 	}
 	
 	@Test 
 	public void getGhContentTest() {
-		System.out.println(mapper.getGhSuppappContent(2));
+		System.out.println(mapper.getGhSuppappContent(3));
 	}
 	
 	@Test
 	public void updateInsttTest() {
 		InsttVO instt = new InsttVO();
-		instt.setInsttNum(4);
-		instt.setInsttName("수정4");
-		instt.setInsttSocNum("수정");
+		instt.setInsttNum(6);
+		instt.setInsttName("수정6");
 		instt.setInsttHomeNum("수정");
 		instt.setInsttPhoneNum("수정");
 		instt.setInsttEmail("수정");
@@ -71,9 +70,8 @@ public class SuppappMapperTest {
 	@Test
 	public void updateTsTest() {
 		TsVO ts = new TsVO();
-		ts.setTsNum(4);
-		ts.setTsName("수정4");
-		ts.setTsSocNum("수정");
+		ts.setTsNum(6);
+		ts.setTsName("수정6");
 		ts.setTsHomeNum("수정");
 		ts.setTsPhoneNum("수정");
 		ts.setTsEmail("수정");
@@ -94,9 +92,8 @@ public class SuppappMapperTest {
 	@Test
 	public void updateGhTest() {
 		GhVO gh = new GhVO();
-		gh.setGhNum(4);
-		gh.setGhName("수정4");
-		gh.setGhSocNum("수정");
+		gh.setGhNum(6);
+		gh.setGhName("수정6");
 		gh.setGhHomeNum("수정");
 		gh.setGhPhoneNum("수정");
 		gh.setGhEmail("수정");

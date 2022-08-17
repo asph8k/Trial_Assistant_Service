@@ -142,7 +142,7 @@
 	
 	<update id="updateInsttSuppapp">
 		UPDATE Instt SET
-		    instt_name = #{InsttName}, instt_soc_num = #{InsttSocNum}, instt_home_num = #{InsttHomeNum},
+		    instt_name = #{InsttName}, instt_home_num = #{InsttHomeNum},
 		    instt_phone_num = #{InsttPhoneNum}, instt_email = #{InsttEmail}, instt_job = #{InsttJob}, 
 		    instt_fax = #{InsttFax}, instt_bank = #{InsttBank}, instt_srttn = #{InsttSrttn}, 
 		    instt_dtl_srttn = #{InsttDtlSrttn}, instt_year = #{InsttYear}, instt_bsns_num = #{InsttBsnsNum}, 
@@ -154,7 +154,7 @@
 	
 	<update id="updateTsSuppapp">
 		UPDATE Ts SET 
-		    ts_name = #{TsName}, ts_soc_num = #{TsSocNum}, ts_home_num = #{TsHomeNum},
+		    ts_name = #{TsName}, ts_home_num = #{TsHomeNum},
 		    ts_phone_num = #{TsPhoneNum}, ts_email = #{TsEmail}, ts_bank = #{TsBank}, ts_exprt = #{TsExprt}, ts_lngg = #{TsLngg},
 		    ts_dsg_crt = #{TsDsgCrt}, ts_active_area = #{TsActiveArea}, ts_acad_back = #{TsAcadBack}, ts_acad_back_file = #{TsAcadBackFile},
 		    ts_carrer = #{TsCarrer}, ts_carrer_file = #{TsCarrerFile},
@@ -164,7 +164,7 @@
 	
 	<update id="updateGhSuppapp">
 		UPDATE Gh SET
-		    gh_name = #{GhName}, gh_soc_num = #{GhSocNum}, gh_home_num = #{GhHomeNum}, gh_phone_num = #{GhPhoneNum}, gh_email = #{GhEmail},
+		    gh_name = #{GhName}, gh_home_num = #{GhHomeNum}, gh_phone_num = #{GhPhoneNum}, gh_email = #{GhEmail},
 		    gh_job = #{GhJob}, gh_fax = #{GhFax}, gh_bank = #{GhBank}, gh_srttn = #{GhSrttn}, gh_year = #{GhYear}, gh_bsns_num = #{GhBsnsNum}, gh_ofc_num = #{GhOfcNum}, gh_ofc_name = #{GhOfcName},
 		    gh_acad_back = #{GhAcadBack}, gh_acad_back_file = #{GhAcadBackFile}, gh_carrer = #{GhCarrer}, gh_carrer_file = #{GhCarrerFile},
 		    gh_addr = #{GhAddr}, gh_dtl_addr = #{GhDtlAddr}

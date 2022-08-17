@@ -29,17 +29,17 @@ public class AppMapperTest {
 	
 	@Test 
 	public void getGhAppContentTest() {
-		System.out.println(mapper.getGhAppContent(2));
+		System.out.println(mapper.getGhAppContent(3));
 	}
 	
 	@Test 
 	public void getTsAppContentTest() {
-		System.out.println(mapper.getTsAppContent(2));
+		System.out.println(mapper.getTsAppContent(3));
 	}	
 	
 	@Test 
 	public void getInsttAppContentTest() {
-		System.out.println(mapper.getInsttAppContent(2));
+		System.out.println(mapper.getInsttAppContent(3));
 	}	
 	
 	@Test
