@@ -86,10 +86,6 @@ form{
     font-weight: 500;
 }
 
-.sec-list{
-        padding: 10% !important;
-      }
-
 /* 여기서부터 추가 */
 .form-total{
     padding-top: 100px;
@@ -195,12 +191,16 @@ form{
     font-size: 20px;
 }
 
+textarea{
+    resize: none;
+}
+
 /* 푸터 */
 .under-footer {
         height: 150px;
     }
 
-    .footer-box2 {
+.footer-box2 {
         padding: 20px 0px;
         position: relative;
         left: 160px;
@@ -209,57 +209,57 @@ form{
         font-weight: 100 !important;
         line-height: 30px;
     }
-    
-</style>
 
+</style>
 </head>
 <body>
 
 	<jsp:include page="../include/header.jsp" />
 	
-	    <!-- side바 추가 -->
-    <div class="total clearfix">
-        <!-- form을 감싸고 있음-->
-    <div class="container side-sec">
-        <div class="row">
-
-            <div class="col-lg-3">
-                <h1 class="h2 pb-4">MY PAGE</h1>
-               
-                <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-                            MY INFO
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-                            	조력자 신청/선정 현황
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            MY FAQ
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-                        	로그아웃
-                        </a>
-                    </li>
-                </ul>
+	<!-- side바 추가 -->
+            <div class="total clearfix">
+                <!-- form을 감싸고 있음-->
+            <div class="container side-sec">
+                <div class="row">
+        
+                    <div class="col-lg-3">
+                        <h1 class="h2 pb-4">MY PAGE</h1>
+        
+                        
+        
+                        <ul class="list-unstyled templatemo-accordion">
+                            <li class="pb-3">
+                                <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
+                                    MY INFO
+                                </a>
+                            </li>
+                            <li class="pb-3">
+                                <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
+                                    	조력자 신청/선정 현황
+                                </a>
+                            </li>
+                            <li class="pb-3">
+                                <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                                    MY FAQ
+                                </a>
+                            </li>
+                            <li class="pb-3">
+                                <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
+                                	로그아웃
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Start Categories of The Month -->
+   <!-- Start Categories of The Month -->
     <form class="form-total">
         <section class = "py-3 total-sec">
 
         <div class="table-box col-lg second-section" >
-            <!-- 타이틀 추가 -->
             <div class="announcement-detail-title">
-                <h3>기관 정보 수정</h3>
+                <h3>기관 신청자 정보 수정</h3>
             </div>
 
 
@@ -268,44 +268,65 @@ form{
                     <div>
                         <div class="input-group mb-3">
 
+                            <span class="input-group-text">이름</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+
+                            <span class="input-group-text">아이디</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                            <span class="input-group-text ">주민등록번호</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                        </div>   
+
+                        <div class="input-group mb-3">
+
+                            <span class="input-group-text">핸드폰 번호</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                            <span class="input-group-text">E-MAIL</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                        </div> 
+
+                        </div>
+
+
+                        <div class="input-group mb-3">
+
+                            <span class="input-group-text">기본주소</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+
+                            <span class="input-group-text">상세주소</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">                
+
+                        </div> 
+
+                        <div class="input-group mb-3">
+
                             <span class="input-group-text">기관 이름</span>
                             <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-                            <span class="input-group-text">기관 연락처</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-                            <span class="input-group-text">기관 팩스번호</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
 
-                        </div>
-
-                        <div class="input-group mb-3">
-
+                            <span class="input-group-text">기관 전화번호</span>
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">                
+                            
                             <span class="input-group-text">기관 주소</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">                
+                        </div> 
 
-                        </div>
-
-                        <div class="input-group mb-3">
-
-                            <span class="input-group-text">기관 등록일</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-                            <span class="input-group-text">기관 해제일</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-
-                        </div>
                     </div>
                     
                 </div>
 
                 <!-- faq를 작성한 사용자만(아이디로 비교) 수정버튼 활성화 -->
                 <div class="notice-regi-btn">
-                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">취소</button>
 
+                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">취소</button>
                     <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">수정</button>
                 </div>
-
+                
             </div>
-
-        </div>        
+            
     </section>
 </form>
 </div>

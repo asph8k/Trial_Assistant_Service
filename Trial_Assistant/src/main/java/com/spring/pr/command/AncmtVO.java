@@ -23,7 +23,7 @@ public class AncmtVO {
 		anm_upload_date DATE  DEFAULT sysdate NOT NULL, 
 		anm_title VARCHAR2(100) NOT NULL, 
 		anm_content VARCHAR2(1000) NOT NULL, 
-		anm_file_loca VARCHAR2(100) NOT NULL, 
+		anm_file_loca VARCHAR2(100) NULL, 
 		anm_view_cnt NUMBER  DEFAULT 0 , 
 		mngr_id VARCHAR2(20) NOT NULL, 
 		anm_degree VARCHAR2(50) NOT NULL,
