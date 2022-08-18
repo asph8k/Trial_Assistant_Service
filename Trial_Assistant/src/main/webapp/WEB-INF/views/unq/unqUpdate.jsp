@@ -224,30 +224,15 @@ form{
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="h2 pb-4">MY PAGE</h1>
-                
-                <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-                            MY INFO
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-                            	조력자 신청/선정 현황
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            MY FAQ
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-                        	로그아웃
-                        </a>
-                    </li>
-                </ul>
+                <h1 class="h2 pb-4">부적격자 명단 관리</h1>
+                  
+                  <ul class="list-unstyled templatemo-accordion">
+                      <li class="pb-3">
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/app/appList"/>'">
+                          	구별 명단 관리
+                          </a>
+                      </li>
+                  </ul>
             </div>
         </div>
     </div>
@@ -302,7 +287,7 @@ form{
 	                <!-- faq를 작성한 사용자만(아이디로 비교) 수정버튼 활성화 -->
 	                <div class="notice-regi-btn">
 	
-	                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">취소</button>
+	                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" onclick="location.href='<c:url value="/unq/unqDetail"/>'">취소</button>
 	                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">수정</button>
 	                </div>
 

@@ -25,7 +25,8 @@
 	</insert>
 	
 	<select id="getInsList" resultMap="InsMap">
-		SELECT * FROM Ins
+		SELECT INS_NUM, INS_NAME, INS_PHONE, INS_RGSTR
+		FROM Ins
 	</select>
 	
 	<select id="getInsTotal" resultType="int">

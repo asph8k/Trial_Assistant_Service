@@ -235,32 +235,18 @@ form{
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="h2 pb-4">MY PAGE</h1>
-
-                
-
                 <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-                            MY INFO
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-                            조력자 신청/선정 현황
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            MY FAQ
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-                        로그아웃
-                        </a>
-                    </li>
-                </ul>
+                  <li class="pb-3">
+                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/ins/insList"/>'">
+                      	기관 정보 조회
+                      </a>
+                  </li>
+                  <li class="pb-3">
+                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" onclick="location.href='<c:url value = "/ins/insAdd"/>'">
+                      	기관 정보 등록
+                      </a>
+                  </li>
+              </ul>
             </div>
         </div>
     </div>
@@ -279,32 +265,32 @@ form{
             <div>
                 <div>
                     <div>
-                        <div class="input-group mb-3">
-
-                            <span class="input-group-text">기관 이름</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-                            <span class="input-group-text">기관 연락처</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-                            <span class="input-group-text">기관 팩스번호</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-
-                        </div>
-
-                        <div class="input-group mb-3">
-
-                            <span class="input-group-text">기관 주소</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-
-                        </div>
-
-                        <div class="input-group mb-3">
-
-                            <span class="input-group-text">기관 등록일</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-                            <span class="input-group-text">기관 해제일</span>
-                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
-
-                        </div>
+	                        <div class="input-group mb-3">
+	
+	                            <span class="input-group-text">기관 이름</span>
+	                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+	                            <span class="input-group-text">기관 연락처</span>
+	                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+	                            <span class="input-group-text">기관 팩스번호</span>
+	                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+	
+	                        </div>
+	
+	                        <div class="input-group mb-3">
+	
+	                            <span class="input-group-text">기관 주소</span>
+	                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+	
+	                        </div>
+	
+	                        <div class="input-group mb-3">
+	
+	                            <span class="input-group-text">기관 등록일</span>
+	                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+	                            <span class="input-group-text">기관 해제일</span>
+	                            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" >
+	
+	                        </div>
                     </div>
                     
                 </div>
@@ -313,7 +299,7 @@ form{
                 <div class="notice-regi-btn">
                     <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">삭제</button>
 
-                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">수정</button>
+                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" onclick="location.href='<c:url value="/ins/insUpdate"/>'">수정</button>
                 </div>
 
           </div>
@@ -334,6 +320,16 @@ form{
 </div>
 	
 	<%@ include file="../include/footer1.jsp"%>
+	
+	<script>
+	
+	$(function() {
+		$('#updateBtn').click(function(){			
+			location.href='<c:url value="/ins/insUpdate" />';
+		});
+	});	
+	
+	</script>
 
 </body>
 </html>

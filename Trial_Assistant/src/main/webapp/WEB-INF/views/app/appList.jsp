@@ -261,29 +261,32 @@
           <div class="row">
   
               <div class="col-lg-3">
-                  <h1 class="h2 pb-4">MY PAGE</h1>
-  
+                  <h1 class="h2 pb-4">구별 명단 관리</h1>
                   
-  
                   <ul class="list-unstyled templatemo-accordion">
                       <li class="pb-3">
-                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-                              MY INFO
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/app/appList"/>'">
+                          	등재 신청자 정보 조회
                           </a>
                       </li>
                       <li class="pb-3">
-                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-                              	조력자 신청/선정 현황
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" onclick="location.href='<c:url value = "/insapp/insappList"/>'">
+                          	기관 신청자 정보 조회
                           </a>
                       </li>
                       <li class="pb-3">
-                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                              MY FAQ
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/suppapp/suppappList"/>'">
+                          	보완 요청자 정보 조회
                           </a>
                       </li>
                       <li class="pb-3">
-                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-                          	로그아웃
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/slctn/slctnList"/>'">
+                          	조력자 신청 승인자 정보 조회
+                          </a>
+                      </li>
+                      <li class="pb-3">
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/unq/unqList"/>'">
+                          	부적격자 명단 관리
                           </a>
                       </li>
                   </ul>
@@ -337,7 +340,9 @@
             <tr style="border-top : 3px solid #e9ecef">
               <td>1</td>
               <td>abcd</td>
-              <td>김호동</td>
+              <td>
+              	<a href="<c:url value='/app/appDetailTotalTras'/>">김호동</a>
+              </td>
               <td>통번역인</td>
               <!-- Javascript를 사용해서 날짜 입력받거나  -->
               <td>2022/07/29</td>
@@ -346,8 +351,10 @@
             <tr>
               <td>2</td>
               <td>abcd</td>
-              <td>박호동</td>
-              <td>통번역인</td>
+              <td>
+              	<a href="<c:url value='/app/appDetailNormal'/>">박호동</a>
+              </td>
+              <td>일반조력자</td>
               <!-- Javascript를 사용해서 날짜 입력받거나  -->
               <td>2022/07/29</td>
               <td><button class="btn del-btn" type="button" id="inputGroupFileAddon04">삭제</button></td>
@@ -355,8 +362,10 @@
             <tr>
               <td>3</td>
               <td>abcd</td>
-              <td>이호동</td>
-              <td>통번역인</td>
+              <td>
+              	<a href="<c:url value='/app/appDetailInsRecom'/>">이호동</a>
+              </td>
+              <td>기관추천조력자</td>
               <!-- Javascript를 사용해서 날짜 입력받거나  -->
               <td>2022/07/29</td>
               <td><button class="btn del-btn" type="button" id="inputGroupFileAddon04">삭제</button></td>

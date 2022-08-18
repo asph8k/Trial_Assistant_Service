@@ -17,12 +17,15 @@
 		<result column="JOINPHONE" property="JoinPhone"/>
 		<result column="JOINADDRBASIC" property="JoinAddrBasic"/>
 		<result column="JOINADDRDETAIL" property="JoinAddrDetail"/>
+		<result column="JOINSOCNUM" property="JoinSocNum"/>
 	</resultMap>
 	
 	<resultMap type="com.spring.pr.command.InsVO" id="InsMap">
+		<result column="INS_NUM" property="InsNum"/>
 		<result column="INS_NAME" property="InsName"/>
 		<result column="INS_PHONE" property="InsPhone"/>
 		<result column="INS_ADDR" property="InsAddr"/>
+		<result column="JOINID" property="JoinId"/>
 	</resultMap>
 	
 	<resultMap type="com.spring.pr.command.InsappVO" id="InsappMap">
@@ -49,10 +52,32 @@
 		WHERE ub.joinid = #{JoinId}
 	</select>
 	
-	<update id="updateInsapp">
-		
+	<update id="updateInsapp1">
+		UPDATE userdetail SET
+			JOINNAME = #{JoinName}, joinphone = #{JoinPhone},
+			joinemail = #{JoinEmail}, joinaddrbasic = #{JoinAddrBasic}, joinaddrdetail = #{JoinAddrDetail}
+		WHERE joinsocnum = #{JoinSocNum}
 	</update>
 	
-	<delete id="deleteInsapp"></delete>
+	<update id="updateInsapp2">
+		UPDATE ins SET
+			ins_name = #{InsName}, ins_phone = #{InsPhone}, ins_addr = #{InsAddr}
+		WHERE joinid = #{JoinId}
+	</update>
+	
+	<delete id="deleteInsapp1">
+		DELETE FROM userdetail
+		WHERE JOINSOCNUM = #{JoinSocNum}
+	</delete>
+	
+	<delete id="deleteInsapp2">
+		DELETE FROM ins
+		WHERE INS_NUM = #{InsNum}
+	</delete>
+	
+	<delete id="deleteInsapp3">
+		DELETE FROM userbasic
+		WHERE JOINID = #{JoinId}
+	</delete>
 	
 </mapper>

@@ -260,30 +260,15 @@
           <div class="row">
   
             <div class="col-lg-3">
-              <h1 class="h2 pb-4">MY PAGE</h1>
-           
-              <ul class="list-unstyled templatemo-accordion">
-                  <li class="pb-3">
-                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-                          MY INFO
-                      </a>
-                  </li>
-                  <li class="pb-3">
-                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-                          	조력자 신청/선정 현황
-                      </a>
-                  </li>
-                  <li class="pb-3">
-                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                          MY FAQ
-                      </a>
-                  </li>
-                  <li class="pb-3">
-                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-                      	로그아웃
-                      </a>
-                  </li>
-              </ul>
+              <h1 class="h2 pb-4">부적격자 명단 관리</h1>
+                  
+                  <ul class="list-unstyled templatemo-accordion">
+                      <li class="pb-3">
+                          <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/app/appList"/>'">
+                          	구별 명단 관리
+                          </a>
+                      </li>
+                  </ul>
           </div>
           </div>
       </div>
@@ -332,7 +317,9 @@
           <tbody>
             <tr style="border-top : 3px solid #e9ecef">
               <td>1</td>
-              <td>abcd</td>
+              <td>
+              	<a href="<c:url value='/unq/unqDetail'/>">abcd</a>
+              </td>
               <td>김호동</td>
               <td>통번역인</td>
               <!-- Javascript를 사용해서 날짜 입력받거나  -->
@@ -341,7 +328,9 @@
             </tr>
             <tr>
               <td>2</td>
-              <td>abcd</td>
+              <td>
+              	<a href="<c:url value='/unq/unqDetail'/>">abcd</a>
+              </td>
               <td>박호동</td>
               <td>통번역인</td>
               <!-- Javascript를 사용해서 날짜 입력받거나  -->
@@ -350,7 +339,9 @@
             </tr>
             <tr>
               <td>3</td>
-              <td>abcd</td>
+              <td>
+              	<a href="<c:url value='/unq/unqDetail'/>">abcd</a>
+              </td>
               <td>이호동</td>
               <td>통번역인</td>
               <!-- Javascript를 사용해서 날짜 입력받거나  -->

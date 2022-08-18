@@ -224,32 +224,18 @@ form{
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="h2 pb-4">MY PAGE</h1>
-
-                
-
                 <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-                            MY INFO
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-                                                조력자 신청/선정 현황
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            MY FAQ
-                        </a>
-                    </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-                        	로그아웃
-                        </a>
-                    </li>
-                </ul>
+                  <li class="pb-3">
+                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/ins/insList"/>'">
+                      	기관 정보 조회
+                      </a>
+                  </li>
+                  <li class="pb-3">
+                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" onclick="location.href='<c:url value = "/ins/insAdd"/>'">
+                      	기관 정보 등록
+                      </a>
+                  </li>
+              </ul>
             </div>
         </div>
     </div>
@@ -300,7 +286,7 @@ form{
 
                 <!-- faq를 작성한 사용자만(아이디로 비교) 수정버튼 활성화 -->
                 <div class="notice-regi-btn">
-                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">취소</button>
+                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" onclick="location.href='<c:url value="/ins/insDetail"/>'">취소</button>
 
                     <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">수정</button>
                 </div>

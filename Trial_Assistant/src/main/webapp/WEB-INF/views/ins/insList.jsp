@@ -255,38 +255,28 @@
 
 	<jsp:include page="../include/header.jsp" />
 	
-      <!-- side바 추가 -->
+        <!-- side바 추가 -->
       <div class="total clearfix">
           <!-- form을 감싸고 있음-->
-	      <div class="container side-sec">
-	          <div class="row">	  
-		          <div class="col-lg-3">
-		              <h1 class="h2 pb-4">MY PAGE</h1>
-	
-		              <ul class="list-unstyled templatemo-accordion">
-		                  <li class="pb-3">
-		                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="mypage_ins.html">
-		                          MY INFO
-		                      </a>
-		                  </li>
-		                  <li class="pb-3">
-		                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" href="#">
-		                          조력자 신청/선정 현황
-		                      </a>
-		                  </li>
-		                  <li class="pb-3">
-		                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-		                          MY FAQ
-		                      </a>
-		                  </li>
-		                  <li class="pb-3">
-		                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="index.html">
-		                      로그아웃
-		                      </a>
-		                 </li>
-		             </ul>
-		        </div>
-	       </div>
+      <div class="container side-sec">
+          <div class="row">
+  
+            <div class="col-lg-3">
+           
+              <ul class="list-unstyled templatemo-accordion">
+                  <li class="pb-3">
+                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none" onclick="location.href='<c:url value = "/ins/insList"/>'">
+                      	기관 정보 조회
+                      </a>
+                  </li>
+                  <li class="pb-3">
+                      <a class="collapsed d-flex justify-content-between h3 text-decoration-none myInfo" onclick="location.href='<c:url value = "/ins/insAdd"/>'">
+                      	기관 정보 등록
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          </div>
       </div>
 
     <!-- Start Categories of The Month -->
@@ -317,30 +307,18 @@
           </thead>
 
           <tbody>
-            <tr style="border-top : 3px solid #e9ecef">
-              <td>1</td>
-              <td>abcd</td>
-              <td>010-1234-4567</td>
-              <!-- Javascript를 사용해서 날짜 입력받거나  -->
-              <td>2022/07/29</td>
-              <td><button class="btn del-btn" type="button" id="inputGroupFileAddon04">삭제</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>abcd</td>
-              <td>010-1234-4567</td>
-              <!-- Javascript를 사용해서 날짜 입력받거나  -->
-              <td>2022/07/29</td>
-              <td><button class="btn del-btn" type="button" id="inputGroupFileAddon04">삭제</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>abcd</td>
-              <td>010-1234-4567</td>
-              <!-- Javascript를 사용해서 날짜 입력받거나  -->
-              <td>2022/07/29</td>
-              <td><button class="btn del-btn" type="button" id="inputGroupFileAddon04">삭제</button></td>
-            </tr>
+          	<c:forEach items="${inslist}" var="il">
+	            <tr style="border-top : 3px solid #e9ecef">
+	              <td>${il.insNum}</td>
+	              <td>
+	              <a href="<c:url value = '/ins/insDetail'/>">${il.insName}</a>
+	              </td>
+	              <td>${il.insPhone}</td>
+	              <!-- Javascript를 사용해서 날짜 입력받거나  -->
+	              <td><fmt:formatDate value="${il.insRgstr}" pattern="yyyy-MM-dd HH:mm"></fmt:formatDate></td>
+	              <td><button class="btn del-btn" type="button" id="inputGroupFileAddon04">삭제</button></td>
+	            </tr>
+           	</c:forEach>
           </tbody>
         </table>
 
@@ -353,9 +331,10 @@
             <button type="button" class="btn btn-outline-secondary">4</button>
             <button type="button" class="btn btn-outline-secondary">▶</button>
           </div>
-          
-      </div>
 
+          <!-- 파일로 출력이 무슨 뜻이지? 
+               물어보기 -->
+      </div>    
     </section>
   </form>
   
