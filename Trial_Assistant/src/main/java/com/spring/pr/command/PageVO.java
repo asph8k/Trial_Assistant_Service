@@ -1,15 +1,27 @@
 package com.spring.pr.command;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class PageVO {
 
-	//시작 페이지
+	//사용자가 선택한 페이지 번호
+	private int pageNum;
 	
-	//끝 페이지
+	//해당 페이지에 보여질 게시물 갯수
+	private int cpp;
 	
-	//이전 페이지 다음 페이지 존재 유무
+	//검색에 필요한 데이터 변수들
+	private String keyword;
+	private String condition;
 	
-	//전체 게시물 수
-	
-	//현재 페이지, 페이지 당 나타날 게시물 개수
+	public PageVO() {
+		this.pageNum = 1;
+		this.cpp = 20;
+	}
 	
 }
